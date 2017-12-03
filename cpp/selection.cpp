@@ -21,7 +21,7 @@ void selection(int *a, int n){
 	for (int i = 0 ; i <n-1; i++){
 		min_idx = i;
 		for (int j= i +1; j<n; j++)
-			if (a[i]>=a[j]) min_idx = j;
+			if (a[i]>=a[min_idx]) min_idx = j;
 			
 		swap(&a[i],&a[min_idx]);
 	}
