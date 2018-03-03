@@ -1,14 +1,14 @@
 #include <iostream>
 #include <stdio.h>
 using namespace std;
-
+typedef struct node node;
 struct node{
 	int data;
 	node *next;
 };
 int insert(node **list, int num)
 {
-	node *tmp = new node();
+	node *tmp = (node*) malloc(sizeof(node));
 	if (tmp == NULL) 
 		return 0;
 	tmp->data = num;
